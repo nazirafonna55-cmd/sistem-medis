@@ -237,4 +237,4 @@ function tampilkanRekam() {
 // ===============================
 
 tampilkanPasien();
-tampilkanRekam();s
+tampilkanRekam();
