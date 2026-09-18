@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #2457d6, #167bc5);
+    color: white;
+    padding: 25px 7%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: red;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    color: #667085;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2457d6;
+    margin-top: 10px;
+}
+
+/* BOX */
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.judul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.judul h2,
+.box h2 {
+    margin-bottom: 5px;
+}
+
+.judul p,
+.keterangan {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* BUTTON */
+
+button {
+    background: #2457d6;
+    color: white;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1744b5;
+}
+
+/* SEARCH */
+
+#search {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5dbe5;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    outline: none;
+}
+
+/* TABLE */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th,
+td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: #f7f9fc;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+.hapus {
+    background: #ffecec;
+    color: #d92d20;
+    padding: 8px 10px;
+}
+
+/* REKAM MEDIS */
+
+.rekam {
+    padding: 15px;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.rekam strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rekam span {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    font-size: 30px;
+    color: #777;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5dbe5;
+    border-radius: 8px;
+}
+
+form textarea {
+    height: 80px;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .judul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .container {
+        width: 92%;
+    }
+}

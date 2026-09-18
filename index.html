@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Rekam Medis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✚</div>
+    <div>
+        <h1>Sistem Rekam Medis</h1>
+        <p>Pengelolaan Data Pasien</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- Statistik -->
+    <div class="cards">
+        <div class="card">
+            <h3>Total Pasien</h3>
+            <p id="totalPasien">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Rekam Medis</h3>
+            <p id="totalRekam">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Dokter</h3>
+            <p>3</p>
+        </div>
+    </div>
+
+    <!-- Data Pasien -->
+    <div class="box">
+
+        <div class="judul">
+            <div>
+                <h2>Data Pasien</h2>
+                <p>Daftar pasien yang terdaftar</p>
+            </div>
+
+            <button onclick="bukaForm()">+ Tambah Pasien</button>
+        </div>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Cari nama pasien..."
+            onkeyup="tampilkanPasien()"
+        >
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Keluhan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelPasien"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Rekam Medis -->
+    <div class="box">
+        <h2>Rekam Medis Terbaru</h2>
+        <p class="keterangan">Riwayat pemeriksaan pasien</p>
+
+        <div id="rekamMedis"></div>
+    </div>
+
+</div>
+
+<!-- Form Tambah Pasien -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="tutupForm()">&times;</span>
+
+        <h2>Tambah Data Pasien</h2>
+
+        <form onsubmit="tambahPasien(event)">
+
+            <label>Nama Pasien</label>
+            <input type="text" id="nama" required>
+
+            <label>Umur</label>
+            <input type="number" id="umur" required>
+
+            <label>Jenis Kelamin</label>
+            <select id="jk" required>
+                <option value="">Pilih</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <label>Keluhan</label>
+            <textarea id="keluhan" required></textarea>
+
+            <button type="submit">Simpan Data</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
