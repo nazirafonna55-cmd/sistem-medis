@@ -5,24 +5,7 @@
 // Ambil data pasien yang tersimpan di browser.
 // Kalau belum ada data tersimpan, gunakan data awal.
 let pasien = JSON.parse(localStorage.getItem("dataPasien")) || [
-    {
-        nama: "Ani",
-        umur: 20,
-        jk: "Perempuan",
-        keluhan: "Demam dan sakit kepala"
-    },
-    {
-        nama: "Budi",
-        umur: 22,
-        jk: "Laki-laki",
-        keluhan: "Batuk dan pilek"
-    },
-    {
-        nama: "Siti",
-        umur: 19,
-        jk: "Perempuan",
-        keluhan: "Nyeri perut"
-    }
+    
 ];
 
 // Simpan data pasien ke localStorage
